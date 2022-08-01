@@ -21,4 +21,4 @@
 - `C` can be placed before `D` (500) and `M` (1000) to make 400 and 900.
 
 Click [Here](https://leetcode.com/problems/roman-to-integer/) to resolve the problem.<br>
-Exercise your coding skill at [LeetCode](https://leetcode.com)!
+Exercise your coding skills at [LeetCode](https://leetcode.com)!
