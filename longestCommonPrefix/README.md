@@ -13,5 +13,5 @@
 #### Overall solution details:
 ![Solution Details](src/solutionDetails.jfif)
 
-Click [Here](https://leetcode.com/problems/longest-common-prefix/) to resolve the problem.<br>
+Click [Here](https://leetcode.com/problems/longest-common-prefix/) to solve the problem.<br>
 Exercise your coding skills at [LeetCode](https://leetcode.com)!
