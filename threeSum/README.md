@@ -45,5 +45,5 @@ Click [Here](https://leetcode.com/problems/3sum/) to solve the problem.<br>
 Exercise your coding skills at [LeetCode](https://leetcode.com)!
 
 <p align="center">
-  <img src="src/muguerço.png.jfif" alt="Solution Details">
+  <img src="src/bat.png.jfif" alt="Solution Details">
 </p>
