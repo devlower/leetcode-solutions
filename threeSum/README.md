@@ -38,7 +38,7 @@ Output: [[0,0,0]]
 #### Overall solution details:
 
 <p align="center">
-  <img src="D:/Desktop/git/leetcode/threeSum/src/solutionDetails.jfif" alt="Solution Details" width="650">
+  <img src="src/solutionDetails.jfif" alt="Solution Details" width="650">
 </p>
 
 Click [Here](https://leetcode.com/problems/3sum/) to solve the problem.<br>
