@@ -5,7 +5,7 @@ class Solution:
         i = 0
 
         if len(strs) > 1 and "" not in strs:
-            range = len((min((word for word in strs if word), key=len)))
+            range = len(min((word for word in strs if word), key=len))
 
             while i < range:
                 index = 0
