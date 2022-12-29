@@ -5,6 +5,11 @@
 #### Return `true` *if the value of the root is equal to the sum of the values of its two children, or* `false` *otherwise.*
 
 ### Example 1:
+
+<p align="left">
+  <img src="src/ex1.png" alt="Example 1" width="250">
+</p>
+
 ```
 Input: root = [10,4,6]
 Output: true
@@ -13,6 +18,11 @@ Explanation: The values of the root, its left child, and its right child are 10,
 ```
 
 ### Example 2:
+
+<p align="left">
+  <img src="src/ex2.png" alt="Example 2" width="250">
+</p>
+
 ```
 Input: root = [5,3,1]
 Output: false
