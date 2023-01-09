@@ -1,52 +1,53 @@
-# Maximum Ice Cream Bars
+# Maximal Score After Applying K Operations
 
-#### It is a sweltering summer day, and a boy wants to buy some ice cream bars.
+You are given a **0-indexed** integer array `nums` and an integer `k`. You have a starting score of `0`.
 
-#### At the store, there are `n` ice cream bars. You are given an array `costs` of length `n`, where `costs[i]` is the price of the `ith` ice cream bar in `coins`. The boy initially has coins coins to spend, and he wants to buy as many ice cream bars as possible. 
+In one **operation**:
 
-#### *Return the maximum number of ice cream bars the boy can buy with* `coins`.
+choose an index `i` such that `0 <= i < nums.length`, increase your **score** by `nums[i]`, and replace `nums[i]` with `ceil(nums[i] / 3)`.
 
-*Note:* The boy can buy the ice cream bars in any order.
+Return *the maximum possible **score** you can attain after applying **exactly** `k` operations.* 
+
+The ceiling function `ceil(val)` is the least integer greater than or equal to `val`.
 
 ### Example 1:
 
 ```
-Input: costs = [1,3,2,4,1], coins = 7
-Output: 4
-Explanation: The boy can buy ice cream bars at indices 0,1,2,4 for a total price of 1 + 3 + 2 + 1 = 7.
+Input: nums = [10,10,10,10,10], k = 5
+Output: 50
+Explanation: Apply the operation to each array element exactly once. The final score is 10 + 10 + 10 + 10 + 10 = 50.
 ```
 
 ### Example 2:
 
 ```
-Input: costs = [10,6,8,7,7,8], coins = 5
-Output: 0
-Explanation: The boy cannot afford any of the ice cream bars.
-```
-
-### Example 3:
-
-```
-Input: costs = [1,6,3,1,2,5], coins = 20
-Output: 6
-Explanation: The boy can buy all the ice cream bars for a total price of 1 + 6 + 3 + 1 + 2 + 5 = 18.
+Input: nums = [1,10,3,3,3], k = 3
+Output: 17
+Explanation: You can do the following operations:
+Operation 1: Select i = 1, so nums becomes [1,4,3,3,3]. Your score increases by 10.
+Operation 2: Select i = 1, so nums becomes [1,2,3,3,3]. Your score increases by 4.
+Operation 3: Select i = 2, so nums becomes [1,1,1,3,3]. Your score increases by 3.
+The final score is 10 + 4 + 3 = 17.
 ```
 
 ### Constraints:: 
 
-- `costs.length == n`
-- `1 <= n <= 10^5`
-- `1 <= costs[i] <= 10^5`
-- `1 <= coins <= 10^8`
+- `1 <= nums.length, k <= 10^5`
+- `<= nums[i] <= 10^9`
 
 ## Solution explanation:
-The method `maxIceCream` takes two arguments: a list of integers called `costs` and an integer called `coins`.
+The method `maxKelements` takes in two arguments:
 
-The method first sorts the `costs` list in ascending order. It then initializes a `counter` variable to 0.
+- a list of integers `nums`
+- an integer `k`
 
-Next, it begins a loop that iterates over each element, `price`, in the `costs` list. For each iteration, it checks if the value of `price` is less than or equal to `coins`. If this condition is true, it subtracts `price` from `coins` and increments the `counter` by 1. If the condition is false, the loop breaks.
+The method returns an integer, which is the sum of the k largest elements in the input list `nums`, after dividing each element by 3 and rounding up to the nearest integer.
 
-Finally, the method returns the value of the `counter` variable, which will be the maximum number of ice creams that the boy can buy.
+The method first initializes an empty list `heap` and a variable `score` to 0. It then iterates through the elements `num` in the input list `nums`, and pushes each element onto the heap as a negative value using the `heappush` function from the `heapq` module. This is because the `heapq` module implements a heap as a list, and by default it is a min-heap where the smallest element is at the top. By pushing the negative of each element, I am effectively creating a max-heap where the largest element is at the top.
+
+Next, the method enters a loop that will run `k` times. On each iteration of the loop, it pops the top element (which is the largest element in the heap) from the heap using the `heappop` function, and adds its absolute value to the `score`. It then pushes the result of dividing the absolute value of the popped element by 3 and rounding up to the nearest integer onto the heap.
+
+Finally, the method returns the value of `score`, which is the sum of the `k` largest elements in the input list `nums`, after dividing each element by 3 and rounding up to the nearest integer.
 
 ### Overall solution details:
 
@@ -54,7 +55,7 @@ Finally, the method returns the value of the `counter` variable, which will be t
   <img src="src/solutionDetails.png" alt="Solution Details" width="650">
 </p>
 
-Try yourself to so solve this [Problem](https://leetcode.com/problems/maximum-ice-cream-bars/)!
+Try yourself to so solve this [Problem](https://leetcode.com/contest/weekly-contest-327/problems/maximal-score-after-applying-k-operations)!
 <br>
 Exercise your coding skills at [LeetCode](https://leetcode.com)!
 
