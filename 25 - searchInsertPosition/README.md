@@ -47,6 +47,10 @@ Try yourself to so solve this [Problem](https://leetcode.com/problems/search-ins
 <br>
 Exercise your coding skills at [LeetCode](https://leetcode.com)!
 
+## References
+
+- [Binary Search Algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+
 <p align="center">
   <img src="src/bat.png" alt="devlower logo" width="150">
 </p>
